@@ -37,11 +37,16 @@ For example, I'm using id_rsa_willquill
 
 ### Create ~/.ssh/config file and put in these contents but customized for you
 
-```Host github-as-willquill
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_rsa_willquill
-    IdentitiesOnly yes
+```vi ~/.ssh/config```
+
+Add this to the file:
+
+```shell
+Host github-as-willquill
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_willquill
+IdentitiesOnly yes
 ```
 
 ### Create your own repo on Github

@@ -1,1 +1,5 @@
-{"componentChunkName":"component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx","path":"/","result":{"data":{"allPost":{"nodes":[{"__typename":"MdxPost","slug":"/death-valley-in-the-age-of-gps","title":"Death Valley in the Age of GPS","date":"02.05.2017","excerpt":"While preparing for a recent trip to Las Vegas for a cybersecurity conference, I decided I would stop by Death Valley National Park before…","timeToRead":3,"description":"Add a route to Garmin watch","tags":[{"name":"Garmin","slug":"garmin"},{"name":"Hiking","slug":"hiking"}]}]}},"pageContext":{"formatString":"DD.MM.YYYY"}},"staticQueryHashes":["3090400250","3090400250","318001574"]}
+{
+    "componentChunkName": "component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx",
+    "path": "/",
+    "result": {"data":{"allPost":{"nodes":[{"slug":"/death-valley-in-the-age-of-gps","title":"Death Valley in the Age of GPS","date":"05.02.2017","excerpt":"While preparing for a recent trip to Las Vegas for a cybersecurity conference, I decided I would stop by Death Valley National Park before…","timeToRead":3,"description":null,"tags":null}]}},"pageContext":{"formatString":"DD.MM.YYYY"}},
+    "staticQueryHashes": ["2744905544","3090400250","318001574"]}

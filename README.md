@@ -54,6 +54,8 @@ module.exports = {
 
 `echo "willcoquillette.com" >> CNAME`
 
+More info [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
 ### Add to package.json
 
 ```
@@ -67,12 +69,6 @@ module.exports = {
 ### Add the GitHub repository
 
 `git remote add origin https://willquill.github.com/will-coquillette`
-
-### Add CNAME to root of site
-
-
-
-More info [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Build and Deploy
 

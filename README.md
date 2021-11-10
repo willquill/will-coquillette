@@ -8,9 +8,9 @@ Located [here](https://willcoquillette.com).
 
 ## Initial Setup
 
-`nvm install 12`
+`nvm install 14`
 
-`nvm use 12`
+`nvm use 14`
 
 `npm install @lekoarts/gatsby-theme-minimal-blog`
 
@@ -45,6 +45,8 @@ Create a static version of the site with the following command.
 `npm install gh-pages`
 
 ### Add to gatsby-config.js
+
+_Note: I actually needed to omit this next step - it depends on what you want your path to be_
 
 ```js
 module.exports = {

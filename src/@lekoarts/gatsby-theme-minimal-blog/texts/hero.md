@@ -2,7 +2,7 @@
 
 ---
 
-For the past few years, I've been using Python and Javascript to facilitate event management for a Security Operations Center.
+For the past few years, I've been using Python and Javascript to facilitate event management for a Security Operations Center. I also used cloud native tools to develop and deploy infrastructure to run ETL pipelines.
 
 I've been using these tools extensively:
 

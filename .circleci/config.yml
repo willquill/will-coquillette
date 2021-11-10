@@ -15,15 +15,25 @@ jobs:
   test:
     <<: *defaults
     steps:
+      - run:
+        # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
+        - openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in git_deploy_key.enc -out /tmp/git_deploy_key
+        # Make sure only the current user can read the private key
+        - chmod 600 /tmp/git_deploy_key
+        # Create a script to return the passphrase environment variable to ssh-add
+        - echo 'echo ${SSL_PASSPHRASE}' > /tmp/askpass && chmod +x /tmp/askpass
+        # Start the authentication agent
+        - eval "$(ssh-agent -s)"
+        # Add the key to the authentication agent
+        - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
+        # checkout, restore_cache, run: yarn install, save_cache, etc.
+        # Run semantic-release after all the above is set.   
       - checkout
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
       # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-      #- run:
-      #    name: NPM Install
-      #    command: npm install
       - run:
           name: Change NPM path
           command: mkdir ~/.npm-global && npm config set prefix '~/.npm-global' 
@@ -39,7 +49,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: ~/will-coquillette
           paths: .
@@ -48,9 +58,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/will-coquillette
-      - add_ssh_keys:
-          fingerprints:
-            - "IZ1Bj67n9zslwRrx2cqgiLXNoJSNJEDFVYqWs8YisW0"
       - run:
           name: Build and Deploy
           command: npm run deploy

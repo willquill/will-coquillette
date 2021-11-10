@@ -77,3 +77,29 @@ More info [here](https://docs.github.com/en/pages/configuring-a-custom-domain-fo
 ## Build and Deploy
 
 `npm run deploy`
+
+# Using CircleCI
+
+If you want this to automatically build and deploy upon commit, you can use CircleCI. These instructions will be incomplete until I flesh them out further.
+
+Some instructions taken from [here](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/git-auth-ssh-keys.md#adding-the-ssh-private-key-to-circle-ci).
+
+## Generate SSH keys
+
+Create the key pair
+
+`ssh-keygen -t rsa -b 4096 -C "<your_email>" -f git_deploy_key -N "<ssh_passphrase>"`
+
+Copy the public key to your GitHub account and then delete the public key
+
+`rm git_deploy_key.pub`
+
+Encrypt the private key with symmetric encryption
+
+```sh
+openssl aes-256-cbc -e -p -in git_deploy_key -out git_deploy_key.enc -K `openssl rand -hex 32` -iv `openssl rand -hex 16`
+```
+
+It will output values for `salt`, `key`, and `iv`.
+
+Continue following the instructions as outlined [here](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/git-auth-ssh-keys.md#adding-the-ssh-private-key-to-circle-ci).

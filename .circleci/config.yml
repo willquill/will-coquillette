@@ -48,6 +48,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/will-coquillette
+      - add_ssh_keys:
+          fingerprints:
+            - "IZ1Bj67n9zslwRrx2cqgiLXNoJSNJEDFVYqWs8YisW0"
       - run:
           name: Build and Deploy
           command: npm run deploy

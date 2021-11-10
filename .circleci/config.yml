@@ -7,7 +7,7 @@ version: 2.1
 #  node: circleci/node@4.7
 
 defaults: &defaults
-  working_directory: ~
+  working_directory: ~/will-coquillette
   docker:
     - image: circleci/node:14.15.0
 
@@ -20,7 +20,7 @@ jobs:
       - run:
           # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
           name: Decrypt Deploy Key
-          command: openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in git_deploy_key.enc -out /tmp/git_deploy_key
+          command: openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in ~/will-coquillette/git_deploy_key.enc -out /tmp/git_deploy_key
       - run:
           # Make sure only the current user can read the private key
           name: chmod the key
@@ -59,13 +59,13 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
-          root: ~
+          root: ~/will-coquillette
           paths: .
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~
+          at: ~/will-coquillette
       - run:
           name: Build and Deploy
           command: npm run deploy

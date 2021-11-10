@@ -7,7 +7,7 @@ version: 2.1
 #  node: circleci/node@4.7
 
 defaults: &defaults
-  working_directory: ~/will-coquillette
+  working_directory: ~
   docker:
     - image: circleci/node:14.15.0
 
@@ -59,13 +59,13 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
-          root: ~/will-coquillette
+          root: ~
           paths: .
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/will-coquillette
+          at: ~
       - run:
           name: Build and Deploy
           command: npm run deploy

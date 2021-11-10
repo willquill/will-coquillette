@@ -15,6 +15,8 @@ jobs:
   test:
     <<: *defaults
     steps:
+      # Must checkout first to obtain git_deploy_key.enc
+      - checkout
       - run:
           # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
           name: Decrypt Deploy Key
@@ -35,8 +37,6 @@ jobs:
           # Add the key to the authentication agent
           name: Add key to authentication agent
           command: DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
-
-      - checkout
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}

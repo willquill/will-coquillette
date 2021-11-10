@@ -63,11 +63,8 @@ jobs:
       #    paths: .
       # Move the below to deploy later
       - run:
-          name: Create SSH Directory
-          command: mkdir ~/.ssh && chmod 700 ~/.ssh
-      - run:
           name: Trust GitHub
-          command: ssh-keyscan -p 443 ssh.github.com > ~/.ssh/known_hosts
+          command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
       - run:
           name: Build and Deploy
           command: npm run deploy

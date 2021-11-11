@@ -103,3 +103,37 @@ openssl aes-256-cbc -e -p -in git_deploy_key -out git_deploy_key.enc -K `openssl
 It will output values for `salt`, `key`, and `iv`.
 
 Continue following the instructions as outlined [here](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/git-auth-ssh-keys.md#adding-the-ssh-private-key-to-circle-ci).
+
+## Setting up keys
+
+Definitely read all of [this](https://circleci.com/docs/2.0/gh-bb-integration/#deployment-keys-and-user-keys) first.
+
+The intended function of a CircleCI deploy key is to use the key to checkout (read) your repository. However, since we want to actually generate a static site with Gatsby and then push those files to the gh-pages branch, we'll need to do something special so CircleCI can _write_ to your repository as well.
+
+[This section](https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-deploy-key) of the documentation I linked above walks you through it pretty well, and I'll repeat it here.
+
+If your CircleCI project or your GitHub repository already has a deploy key but you want to start fresh, it's safe to just delete it from both platforms.
+
+Locally, run this command (but with whatever email address you want to use) to generate the key pair. Do not enter a passphrase. Just hit enter to skip it.
+
+`ssh-keygen -t ed25519 -f circle_ci_deploy -C "4646219+willquill@users.noreply.github.com"`
+
+Go to the "Add deploy key" section of your repository settings in GitHub and add the public key created with the `ssh-keygen` command.
+
+Now go to your CircleCI project and add **the private key** under "Additional SSH keys". Do _not_ click "Add Deploy Key" because that auto-generated deploy key is only meant for read access, and we need write as well. For the hostname, enter `github.com`.
+
+After creating the key, it will show up as a fingerprint.
+
+In your config.yml for CircleCI, add the fingerprint using the add_ssh_keys key, wherever it's appropriate for your use case. Here's an example:
+
+```
+version: 2
+jobs:
+  deploy-job:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SO:ME:FIN:G:ER:PR:IN:T"
+```
+
+

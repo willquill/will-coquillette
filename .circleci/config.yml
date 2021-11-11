@@ -15,28 +15,10 @@ jobs:
   test:
     <<: *defaults
     steps:
-      # Must checkout first to obtain git_deploy_key.enc
+      - add_ssh_keys:
+          fingerprints:
+            - "2a:65:7f:36:93:81:b1:8f:02:da:ae:46:47:0c:85:78" 
       - checkout
-      - run:
-          # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
-          name: Decrypt Deploy Key
-          command: openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in ~/will-coquillette/git_deploy_key.enc -out /tmp/git_deploy_key
-      - run:
-          # Make sure only the current user can read the private key
-          name: chmod the key
-          command: chmod 600 /tmp/git_deploy_key
-      - run:
-          # Create a script to return the passphrase environment variable to ssh-add
-          name: Create Script to get PP env
-          command: echo 'echo ${SSL_PASSPHRASE}' > /tmp/askpass && chmod +x /tmp/askpass
-      - run:
-          # Start the authentication agent
-          name: Start authentication agent
-          command: eval "$(ssh-agent -s)"
-      - run:
-          # Add the key to the authentication agent
-          name: Add key to authentication agent
-          command: DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -57,24 +39,20 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-            - .npm-global
           key: v1-dependencies-{{ checksum "package.json" }}
       #- persist_to_workspace:
       #    root: ~/will-coquillette
       #    paths: .
       # Move the below to deploy later
-      - run:
-          name: Trust GitHub
-          command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
-      - run:
-          name: Git Email
-          command: git config --global user.email "4646219+willquill@users.noreply.github.com"
-      - run:
-          name: Git Username
-          command: git config --global user.name "Circle CI"
-      - add_ssh_keys:
-          fingerprints:
-            - "2KVpJOq/YuRbTawy/LeAR7d7urLyxg63mM1dDBCZQPg"    
+      #- run:
+      #    name: Trust GitHub
+      #    command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
+      #- run:
+      #    name: Git Email
+      #    command: git config --global user.email "4646219+willquill@users.noreply.github.com"
+      #- run:
+      #    name: Git Username
+      #    command: git config --global user.name "Circle CI"   
       - run:
           name: Build and Deploy
           command: npm run deploy

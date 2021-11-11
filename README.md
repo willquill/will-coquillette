@@ -147,3 +147,4 @@ The official documentation states that the `checkout` job automatically adds the
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
 
+ssh-keygen -m PEM -t rsa -f circleci

@@ -11,7 +11,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "39:37:d7:82:a2:40:fc:34:81:9b:84:d0:a3:74:a2:3c" 
+            - "9f:c8:35:7c:6c:1f:a6:fe:cb:50:07:bc:82:e4:27:12" 
       #- run:
       #    name: Trust GitHub
       #    command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts

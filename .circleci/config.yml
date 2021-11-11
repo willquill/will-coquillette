@@ -66,6 +66,12 @@ jobs:
           name: Trust GitHub
           command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
       - run:
+          name: Git Email
+          command: git config --global user.email "4646219+willquill@users.noreply.github.com"
+      - run:
+          name: Git Username
+          command: git config --global user.name "Circle CI"
+      - run:
           name: Build and Deploy
           command: npm run deploy
   #deploy:

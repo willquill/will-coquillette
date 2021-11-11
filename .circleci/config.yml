@@ -23,10 +23,10 @@ jobs:
           command: export PATH=~/.npm-global/bin:$PATH && source ~/.profile
       - run:
           name: Install Gatsby CLI
-          command: |
-            npm config set prefix /usr/local
-            npm install -g gatsby-cli
-            npm -g ls --depth=0
+          command: npm install -g gatsby-cli
+      -run:
+          name: Check NPM Installs
+          command: npm -g ls --depth=0
       - run:
           name: Build With Gatsby
           command: |

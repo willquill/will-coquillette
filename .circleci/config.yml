@@ -1,10 +1,4 @@
-# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
 version: 2.1
-
-# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
-# See: https://circleci.com/docs/2.0/orb-intro/
-#orbs:
-#  node: circleci/node@4.7
 
 defaults: &defaults
   working_directory: ~/will-coquillette
@@ -17,7 +11,10 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "2a:65:7f:36:93:81:b1:8f:02:da:ae:46:47:0c:85:78" 
+            - "39:37:d7:82:a2:40:fc:34:81:9b:84:d0:a3:74:a2:3c" 
+      #- run:
+      #    name: Trust GitHub
+      #    command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
       - checkout
       - restore_cache:
           keys:
@@ -44,9 +41,6 @@ jobs:
       #    root: ~/will-coquillette
       #    paths: .
       # Move the below to deploy later
-      #- run:
-      #    name: Trust GitHub
-      #    command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
       #- run:
       #    name: Git Email
       #    command: git config --global user.email "4646219+willquill@users.noreply.github.com"

@@ -118,6 +118,11 @@ Locally, run this command (but with whatever email address you want to use) to g
 
 `ssh-keygen -t ed25519 -f circle_ci_deploy -C "4646219+willquill@users.noreply.github.com"`
 
+
+`ssh-keygen -t ed25519 -f circle_ci_deploy -C "CircleCI Deploy Key with Write Access" -m PEM`
+
+ssh-keygen -t rsa -b 4096 -C "CircleCI Deploy Key with Write Access" -f circleci_deploy -m PEM
+
 Go to the "Add deploy key" section of your repository settings in GitHub and add the public key created with the `ssh-keygen` command.
 
 Now go to your CircleCI project and add **the private key** under "Additional SSH keys". Do _not_ click "Add Deploy Key" because that auto-generated deploy key is only meant for read access, and we need write as well. For the hostname, enter `github.com`.
@@ -136,4 +141,9 @@ jobs:
             - "SO:ME:FIN:G:ER:PR:IN:T"
 ```
 
+The official documentation states that the `checkout` job automatically adds the fingerprints of GitHub itself, but this wasn't the case for me, so I had to include this step in my build as well:
+
+```
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+```
 

@@ -57,6 +57,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
+            - .npm-global
           key: v1-dependencies-{{ checksum "package.json" }}
       #- persist_to_workspace:
       #    root: ~/will-coquillette
@@ -71,6 +72,9 @@ jobs:
       - run:
           name: Git Username
           command: git config --global user.name "Circle CI"
+      - add_ssh_keys:
+          fingerprints:
+            - "2KVpJOq/YuRbTawy/LeAR7d7urLyxg63mM1dDBCZQPg"    
       - run:
           name: Build and Deploy
           command: npm run deploy

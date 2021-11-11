@@ -40,6 +40,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/will-coquillette
+      - add_ssh_keys:
+          fingerprints:
+            - "9f:c8:35:7c:6c:1f:a6:fe:cb:50:07:bc:82:e4:27:12"           
       - run:
           name: Git Email
           command: git config --global user.email "4646219+willquill@users.noreply.github.com"

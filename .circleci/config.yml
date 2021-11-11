@@ -9,12 +9,6 @@ jobs:
   test:
     <<: *defaults
     steps:
-      #- add_ssh_keys:
-      #    fingerprints:
-      #      - "9f:c8:35:7c:6c:1f:a6:fe:cb:50:07:bc:82:e4:27:12" 
-      #- run:
-      #    name: Trust GitHub
-      #    command: ssh-keyscan -p 443 github.com >> ~/.ssh/known_hosts
       - checkout
       - restore_cache:
           keys:
@@ -37,10 +31,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      #- persist_to_workspace:
-      #    root: ~/will-coquillette
-      #    paths: .
-      # Move the below to deploy later
+      - persist_to_workspace:
+          root: ~/will-coquillette
+          paths: .
+           
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/will-coquillette
       - run:
           name: Git Email
           command: git config --global user.email "4646219+willquill@users.noreply.github.com"
@@ -50,17 +49,6 @@ jobs:
       - run:
           name: Build and Deploy
           command: npm run deploy
-  #deploy:
-  #  <<: *defaults
-  #  steps:
-  #    - attach_workspace:
-  #        at: ~/will-coquillette
-  #    - run:
-  #        name: Trust GitHub
-  #        command: ssh-keyscan -p 443 ssh.github.com > ~/.ssh/known_hosts
-  #    - run:
-  #        name: Build and Deploy
-  #        command: npm run deploy
 
 workflows:
   version: 2
@@ -70,9 +58,9 @@ workflows:
         #  filters:
         #    tags:
         #      only: /^v.*/
-      ##- deploy:
-      ##    requires:
-      ##      - test
+      - deploy:
+          requires:
+            - test
        #   filters:
        #     tags:
        #       only: /^v.*/

@@ -82,28 +82,6 @@ More info [here](https://docs.github.com/en/pages/configuring-a-custom-domain-fo
 
 If you want this to automatically build and deploy upon commit, you can use CircleCI. These instructions will be incomplete until I flesh them out further.
 
-Some instructions taken from [here](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/git-auth-ssh-keys.md#adding-the-ssh-private-key-to-circle-ci).
-
-## Generate SSH keys
-
-Create the key pair
-
-`ssh-keygen -t rsa -b 4096 -C "<your_email>" -f git_deploy_key -N "<ssh_passphrase>"`
-
-Copy the public key to your GitHub account and then delete the public key
-
-`rm git_deploy_key.pub`
-
-Encrypt the private key with symmetric encryption
-
-```sh
-openssl aes-256-cbc -e -p -in git_deploy_key -out git_deploy_key.enc -K `openssl rand -hex 32` -iv `openssl rand -hex 16`
-```
-
-It will output values for `salt`, `key`, and `iv`.
-
-Continue following the instructions as outlined [here](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/git-auth-ssh-keys.md#adding-the-ssh-private-key-to-circle-ci).
-
 ## Setting up keys
 
 Definitely read all of [this](https://circleci.com/docs/2.0/gh-bb-integration/#deployment-keys-and-user-keys) first.
@@ -116,35 +94,10 @@ If your CircleCI project or your GitHub repository already has a deploy key but 
 
 Locally, run this command (but with whatever email address you want to use) to generate the key pair. Do not enter a passphrase. Just hit enter to skip it.
 
-`ssh-keygen -t ed25519 -f circle_ci_deploy -C "4646219+willquill@users.noreply.github.com"`
-
-
-`ssh-keygen -t ed25519 -f circle_ci_deploy -C "CircleCI Deploy Key with Write Access" -m PEM`
-
-ssh-keygen -t rsa -b 4096 -C "CircleCI Deploy Key with Write Access" -f circleci_deploy -m PEM
+`ssh-keygen -t rsa -m PEM -f circleci`
 
 Go to the "Add deploy key" section of your repository settings in GitHub and add the public key created with the `ssh-keygen` command.
 
 Now go to your CircleCI project and add **the private key** under "Additional SSH keys". Do _not_ click "Add Deploy Key" because that auto-generated deploy key is only meant for read access, and we need write as well. For the hostname, enter `github.com`.
 
-After creating the key, it will show up as a fingerprint.
-
-In your config.yml for CircleCI, add the fingerprint using the add_ssh_keys key, wherever it's appropriate for your use case. Here's an example:
-
-```
-version: 2
-jobs:
-  deploy-job:
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "SO:ME:FIN:G:ER:PR:IN:T"
-```
-
-The official documentation states that the `checkout` job automatically adds the fingerprints of GitHub itself, but this wasn't the case for me, so I had to include this step in my build as well:
-
-```
-ssh-keyscan github.com >> ~/.ssh/known_hosts
-```
-
-ssh-keygen -m PEM -t rsa -f circleci
+The official documentation talks about needing to use `add_ssh_keys` with fingerprints. YOU DO NOT NEED TO DO THIS. In fact, when I did it, the checkout timed out on waiting for a passphrase. You don't even need it for `npm run deploy` - see my .circleci/config.yml as an example.

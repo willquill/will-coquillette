@@ -24,9 +24,6 @@ jobs:
       - run:
           name: Install Gatsby CLI
           command: npm install -g gatsby-cli
-      - run:
-          name: Install GitHub Pages
-          command: npm install gh-pages
       - save_cache:
           paths:
             - node_modules
@@ -40,15 +37,20 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/will-coquillette
+      - run:
+          name: Remove Whatever SSH Key
+          command: rm -rf ~/.ssh/id_rsa
       - add_ssh_keys:
           fingerprints:
             - "9f:c8:35:7c:6c:1f:a6:fe:cb:50:07:bc:82:e4:27:12"           
       - run:
-          name: Git Email
-          command: git config --global user.email "4646219+willquill@users.noreply.github.com"
+          name: Git Config
+          command: |
+            git config --global user.email "4646219+willquill@users.noreply.github.com"
+            git config --global user.name "Circle CI"
       - run:
-          name: Git Username
-          command: git config --global user.name "Circle CI"   
+          name: Install GitHub Pages
+          command: npm install gh-pages
       - run:
           name: Build and Deploy
           command: npm run deploy

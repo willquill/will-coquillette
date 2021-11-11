@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Install Gatsby CLI
           command: npm install -g gatsby-cli
-      -run:
+      - run:
           name: Check NPM Installs
           command: npm -g ls --depth=0
       - run:

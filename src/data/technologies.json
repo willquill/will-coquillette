@@ -23,6 +23,24 @@
       "logo": "mdi:language-python"
     }
   ],
+  "Homelab": [
+    {
+      "text": "Ansible",
+      "logo": "mdi:ansible"
+    },
+    {
+      "text": "Docker",
+      "logo": "mdi:docker"
+    },
+    {
+      "text": "OPNSense",
+      "logo": "mdi:letter-o"
+    },
+    {
+      "text": "Proxmox VE",
+      "logo": "mdi:letter-p"
+    }
+  ],
   "Hosting and Cloud Services": [
     {
       "text": "AWS",
@@ -41,7 +59,7 @@
       "logo": "mdi:linode"
     }
   ],
-  "Operating Systems": [
+  "Operating System Proficiency": [
     {
       "text": "macOS",
       "logo": "mdi:apple"
@@ -55,7 +73,29 @@
       "logo": "mdi:ubuntu"
     }
   ],
+  "Preferred Services": [
+    {
+      "text": "Bitwarden",
+      "logo": "mdi:secure"
+    },
+    {
+      "text": "Kagi",
+      "logo": "mdi:letter-k"
+    },
+    {
+      "text": "NextDNS",
+      "logo": "mdi:letter-n"
+    }
+  ],
   "Preferred Tools": [
+    {
+      "text": "Alacritty",
+      "logo": "mdi:letter-a"
+    },
+    {
+      "text": "BBEdit",
+      "logo": "mdi:letter-b"
+    },
     {
       "text": "Firefox",
       "logo": "mdi:mozilla-firefox"
@@ -63,10 +103,6 @@
     {
       "text": "Visual Studio Code",
       "logo": "mdi:visual-studio-code"
-    },
-    {
-      "text": "Alacritty",
-      "logo": "mdi:letter-a"
     }
   ]
 }

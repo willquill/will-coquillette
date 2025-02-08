@@ -1,28 +1,26 @@
 {
   "Cloud Infrastructure": [
     {
-      "text": "AWS",
-      "logo": "mdi:aws"
-    },
-    {
-      "text": "Terraform",
-      "logo": "mdi:terraform"
+      "text": "Helm",
+      "logo": "mdi:helm"
     },
     {
       "text": "Kubernetes",
       "logo": "mdi:kubernetes"
     },
     {
-      "text": "Helm",
-      "logo": "mdi:helm"
+      "text": "Terraform",
+      "logo": "mdi:terraform"
+    }
+  ],
+  "Scripting": [
+    {
+      "text": "Bash",
+      "logo": "mdi:bash"
     },
     {
-      "text": "Vault",
-      "logo": "mdi:hashicorp-vault"
-    },
-    {
-      "text": "Consul",
-      "logo": "mdi:hashicorp-consul"
+      "text": "Python",
+      "logo": "mdi:language-python"
     }
   ],
   "Development Tools": [
@@ -37,6 +35,10 @@
   ],
   "Hosting and Cloud Services": [
     {
+      "text": "AWS",
+      "logo": "mdi:aws"
+    },
+    {
       "text": "DigitalOcean",
       "logo": "mdi:digital-ocean"
     },
@@ -45,11 +47,19 @@
       "logo": "cib:cloudflare"
     },
     {
+      "text": "Linode",
+      "logo": "mdi:linode"
+    },
+    {
       "text": "Netlify",
       "logo": "cib:netlify"
     }
   ],
   "Operating Systems": [
+    {
+      "text": "macOS",
+      "logo": "mdi:apple"
+    },
     {
       "text": "Windows",
       "logo": "mdi:windows"

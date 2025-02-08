@@ -12,6 +12,10 @@
     "text": "Blog"
   },
   {
+    "href": "/about/",
+    "text": "About"
+  },
+  {
     "href": "https://github.com/willquill/will-coquillette",
     "target": "_blank",
     "rel": "noopener noreferrer",

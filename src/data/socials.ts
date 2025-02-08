@@ -1,13 +1,13 @@
-export const tag = "@cojocaru-david";
-export const author = "David Cojocaru";
+export const tag = "@willquill";
+export const author = "Will Coquillette";
 
 export const defaultMeta = {
-  title: "David Cojocaru - Home",
+  title: "Will Coquillette - Home",
   description:
-    "Discover the portfolio and blog of David Cojocaru, a 16-year-old software developer and cybersecurity enthusiast from Romania. Explore his expertise in web development, programming languages, and more.",
-  keywords: ["david cojocaru", "junior software developer", "junior", "cybersecurity enthusiast", "web development", "programming", "portfolio", "blog", "romania"],
+    "Discover the portfolio and blog of Will Coquillette, a site reliability engineer. Explore his expertise in platform engineering, homelabbing, and more.",
+  keywords: ["will coquillette", "software engineer", "devops engineer", "cybersecurity enthusiast", "sre engineer", "programming", "portfolio", "blog"],
   ogImage: {
     src: "/banner.png",
-    alt: "David Cojocaru - Home",
+    alt: "Will Coquillette - Home",
   },
 };

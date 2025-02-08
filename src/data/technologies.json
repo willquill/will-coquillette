@@ -49,10 +49,6 @@
     {
       "text": "Linode",
       "logo": "mdi:linode"
-    },
-    {
-      "text": "Netlify",
-      "logo": "cib:netlify"
     }
   ],
   "Operating Systems": [

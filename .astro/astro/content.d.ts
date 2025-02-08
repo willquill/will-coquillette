@@ -158,6 +158,34 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fortigate-90d-poe-with-fortiap-on-5-4-1.md": {
+	id: "fortigate-90d-poe-with-fortiap-on-5-4-1.md";
+  slug: "fortigate-90d-poe-with-fortiap-on-5-4-1";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"google-fiber-with-fortigate-90d.md": {
+	id: "google-fiber-with-fortigate-90d.md";
+  slug: "google-fiber-with-fortigate-90d";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sonos-subnets-ex2200.md": {
+	id: "sonos-subnets-ex2200.md";
+  slug: "sonos-subnets-ex2200";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"ubuntu-lxc-zfs-docker.md": {
+	id: "ubuntu-lxc-zfs-docker.md";
+  slug: "ubuntu-lxc-zfs-docker";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 
 	};

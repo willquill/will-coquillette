@@ -23,28 +23,18 @@
       "logo": "mdi:language-python"
     }
   ],
-  "Development Tools": [
-    {
-      "text": "Visual Studio Code",
-      "logo": "mdi:visual-studio-code"
-    },
-    {
-      "text": "Git",
-      "logo": "mdi:git"
-    }
-  ],
   "Hosting and Cloud Services": [
     {
       "text": "AWS",
       "logo": "mdi:aws"
     },
     {
-      "text": "DigitalOcean",
-      "logo": "mdi:digital-ocean"
-    },
-    {
       "text": "Cloudflare",
       "logo": "cib:cloudflare"
+    },
+    {
+      "text": "DigitalOcean",
+      "logo": "mdi:digital-ocean"
     },
     {
       "text": "Linode",
@@ -65,56 +55,18 @@
       "logo": "mdi:ubuntu"
     }
   ],
-  "Other Programming Languages and Technologies": [
+  "Preferred Tools": [
     {
-      "text": "Lua",
-      "logo": "mdi:language-lua"
+      "text": "Firefox",
+      "logo": "mdi:mozilla-firefox"
     },
     {
-      "text": "Golang",
-      "logo": "mdi:language-go"
+      "text": "Visual Studio Code",
+      "logo": "mdi:visual-studio-code"
     },
     {
-      "text": "Node.js",
-      "logo": "mdi:nodejs"
-    }
-  ],
-  "Web Servers": [
-    {
-      "text": "Apache",
-      "logo": "cib:apache"
-    },
-    {
-      "text": "Nginx",
-      "logo": "cib:nginx"
-    }
-  ],
-  "Databases": [
-    {
-      "text": "MySQL",
-      "logo": "cib:mysql"
-    },
-    {
-      "text": "MongoDB",
-      "logo": "cib:mongodb"
-    }
-  ],
-  "Other Software": [
-    {
-      "text": "Discord",
-      "logo": "mdi:discord"
-    },
-    {
-      "text": "Spotify",
-      "logo": "mdi:spotify"
-    },
-    {
-      "text": "Visual Studio",
-      "logo": "mdi:visual-studio"
-    },
-    {
-      "text": "Brave",
-      "logo": "cib:brave"
+      "text": "Alacritty",
+      "logo": "mdi:letter-a"
     }
   ]
 }

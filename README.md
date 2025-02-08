@@ -1,17 +1,12 @@
 # willcoquillette.com
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/cojocaru-david/willcoquillette.com/ci.yml)
-![License](https://img.shields.io/github/license/cojocaru-david/willcoquillette.com)
-![Version](https://img.shields.io/github/package-json/v/cojocaru-david/willcoquillette.com)
-![Stars](https://img.shields.io/github/stars/cojocaru-david/willcoquillette.com?style=social)
-
-👋 Hi, I'm David, a 16yo coder from Romania 🚀 Crafting web wonders with JavaScript, PHP, and React. Linux lover automating tasks with Bash.
+My personal website.
 
 ## 🚀 Project Overview
 
-willcoquillette.com is a blazing fast personal website built with Astro.js and styled with Tailwind CSS. It showcases my projects, blog posts, and more.
+willcoquillette.com is a blazing fast personal website built with Astro.js and styled with Tailwind CSS.
 
-![Website Screenshot](.github/smartmockups_m1jn1m6x.jpg)
+I sincerely thank David Cojocaru, a 16yo coder from Romania for the [theme](https://github.com/cojocaru-david/cojocarudavid.me). I just copied his Astro site and personalized it for myself.
 
 ## 🌟 Features
 
@@ -40,13 +35,13 @@ willcoquillette.com is a blazing fast personal website built with Astro.js and s
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/cojocaru-david/willcoquillette.com.git
+   git clone https://github.com/willquill/will-coquillette.git
    ```
 
 2. **Install dependencies:**
 
    ```sh
-   cd willcoquillette.com
+   cd will-coquillette
    npm install
    ```
 
@@ -70,22 +65,17 @@ willcoquillette.com is a blazing fast personal website built with Astro.js and s
   npm run deploy
   ```
 
-### Contributing
-
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 💬 Contact
 
-Feel free to reach out to me at [contact@willcoquillette.com](mailto:contact@willcoquillette.com).
+Feel free to reach out to me at [nonsense@willquill.addy.io](mailto:nonsense@willquill.addy.io).
 
 ## 🚀 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/cojocaru-david)
-- [Blog](https://willcoquillette.com/blog)
+- FIXME: Add socials
 
 ## 🌟 Show Your Support
 
@@ -96,3 +86,4 @@ Give a ⭐️ if you like this project!
 - [Astro.js](https://astro.build/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [GitHub Actions](https://github.com/features/actions)
+- Again, [David](https://github.com/cojocaru-david/cojocarudavid.me)

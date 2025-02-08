@@ -1,26 +1,35 @@
 [
   {
-    "name": "cojocaru-david",
-    "stars": 33,
-    "url": "https://github.com/cojocaru-david/cojocarudavid.me",
-    "description": "Blazing fast personal website built with Astro.js and styled with Tailwind CSS.",
+    "name": "plex-docker",
+    "stars": 68,
+    "url": "https://github.com/willquill/plex-docker",
+    "description": "Deploy Plex and supporting apps with docker compose.",
     "languages": [
-      "Astro",
-      "TypeScript",
-      "JavaScript",
-      "CSS"
+      "Shell",
+      "YAML"
     ],
     "role": "author"
   },
   {
-    "name": "david-dark-code",
-    "stars": 12,
-    "url": "https://github.com/cojocaru-david/david-dark-code",
-    "website": "https://marketplace.visualstudio.com/items?itemName=cojocaru-david.david-dark-code",
-    "description": "David Dark is a dark theme for VS Code. It is based on the github theme and the default dark theme. It is designed to be easy on the eyes and to be used for long periods of time.",
+    "name": "omada-ubuntu",
+    "stars": 13,
+    "url": "https://github.com/willquill/omada-ubuntu",
+    "description": "Deploy TP-Link Omada controller in Ubuntu.",
     "languages": [
-      "NodeJS",
-      "JSON"
+      "Shell",
+      "YAML"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "untangle-mdns",
+    "stars": 8,
+    "url": "https://github.com/willquill/untangle-mdns",
+    "description": "Ansible playbook for adding mDNS to your Untangle box.",
+    "languages": [
+      "Ansible",
+      "Shell",
+      "YAML"
     ],
     "role": "author"
   }

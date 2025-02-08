@@ -151,37 +151,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"dark-mode-in-astro.md": {
-	id: "dark-mode-in-astro.md";
-  slug: "dark-mode-in-astro";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"install-nginx-secure.md": {
-	id: "install-nginx-secure.md";
-  slug: "install-nginx-secure";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"introduction-pwas.md": {
-	id: "introduction-pwas.md";
-  slug: "introduction-pwas";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"mobile-website-optimization-best-practices.md": {
-	id: "mobile-website-optimization-best-practices.md";
-  slug: "mobile-website-optimization-best-practices";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"what-is-tailwind.md": {
-	id: "what-is-tailwind.md";
-  slug: "what-is-tailwind";
+"death-valley-in-the-age-of-gps.md": {
+	id: "death-valley-in-the-age-of-gps.md";
+  slug: "death-valley-in-the-age-of-gps";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

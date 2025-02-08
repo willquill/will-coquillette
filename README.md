@@ -6,7 +6,11 @@ My personal website.
 
 willcoquillette.com is a blazing fast personal website built with Astro.js and styled with Tailwind CSS.
 
-I sincerely thank David Cojocaru, a 16yo coder from Romania for the [theme](https://github.com/cojocaru-david/cojocarudavid.me). I just copied his Astro site and personalized it for myself.
+I don't like developing websites. So I sincerely thank David Cojocaru, a 16yo coder from Romania for the [theme](https://github.com/cojocaru-david/cojocarudavid.me). I just copied his Astro site and personalized it for myself.
+
+### Planned changes
+
+- Do not require "hero" image on blog posts
 
 ## 🌟 Features
 

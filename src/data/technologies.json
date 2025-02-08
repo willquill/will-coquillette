@@ -1,28 +1,28 @@
 {
-  "Web Development": [
+  "Cloud Infrastructure": [
     {
-      "text": "HTML",
-      "logo": "mdi:language-html5"
+      "text": "AWS",
+      "logo": "mdi:aws"
     },
     {
-      "text": "JavaScript",
-      "logo": "mdi:language-javascript"
+      "text": "Terraform",
+      "logo": "mdi:terraform"
     },
     {
-      "text": "CSS",
-      "logo": "mdi:language-css3"
+      "text": "Kubernetes",
+      "logo": "mdi:kubernetes"
     },
     {
-      "text": "PHP",
-      "logo": "mdi:language-php"
+      "text": "Helm",
+      "logo": "mdi:helm"
     },
     {
-      "text": "Astro",
-      "logo": "simple-icons:astro"
+      "text": "Vault",
+      "logo": "mdi:hashicorp-vault"
     },
     {
-      "text": "Tailwind CSS",
-      "logo": "mdi:tailwind"
+      "text": "Consul",
+      "logo": "mdi:hashicorp-consul"
     }
   ],
   "Development Tools": [

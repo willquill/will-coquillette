@@ -11,7 +11,9 @@ I don't like developing websites. So I sincerely thank David Cojocaru, a 16yo co
 ### Planned changes
 
 - Do not require "hero" image on blog posts
-- Finish developing `/src/layouts/MarkdownPageLayout.astro` so About page renders properly
+- Rename `About` layout to `Markdown` and make the title be a variable properly
+- Fix all the errors in the code
+- Resolve vulnerabilities
 
 ## 🌟 Features
 

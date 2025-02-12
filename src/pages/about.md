@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MarkdownPageLayout.astro
+layout: ../layouts/AboutLayout.astro
 title: "About"
 author: "Will Coquillette"
 ---

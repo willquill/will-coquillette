@@ -1,0 +1,104 @@
+{
+  "Cloud Services (work and personal)": [
+    {
+      "text": "AWS",
+      "logo": "mdi:aws"
+    },
+    {
+      "text": "Cloudflare",
+      "logo": "cib:cloudflare"
+    },
+    {
+      "text": "Linode",
+      "logo": "mdi:linode"
+    }
+  ],
+  "Infrastructure as Code": [
+    {
+      "text": "Helm",
+      "logo": "mdi:helm"
+    },
+    {
+      "text": "Kubernetes",
+      "logo": "mdi:kubernetes"
+    },
+    {
+      "text": "Terraform",
+      "logo": "mdi:terraform"
+    }
+  ],
+  "Scripting": [
+    {
+      "text": "Bash",
+      "logo": "mdi:bash"
+    },
+    {
+      "text": "Python",
+      "logo": "mdi:language-python"
+    }
+  ],
+  "Homelab": [
+    {
+      "text": "Ansible",
+      "logo": "mdi:ansible"
+    },
+    {
+      "text": "Docker",
+      "logo": "mdi:docker"
+    },
+    {
+      "text": "OPNSense",
+      "logo": "mdi:letter-o"
+    },
+    {
+      "text": "Proxmox VE",
+      "logo": "mdi:letter-p"
+    }
+  ],
+  "Operating System Proficiency": [
+    {
+      "text": "macOS",
+      "logo": "mdi:apple"
+    },
+    {
+      "text": "Windows",
+      "logo": "mdi:windows"
+    },
+    {
+      "text": "Ubuntu",
+      "logo": "mdi:ubuntu"
+    }
+  ],
+  "Preferred Services": [
+    {
+      "text": "Bitwarden",
+      "logo": "mdi:secure"
+    },
+    {
+      "text": "Kagi",
+      "logo": "mdi:letter-k"
+    },
+    {
+      "text": "NextDNS",
+      "logo": "mdi:letter-n"
+    }
+  ],
+  "Preferred Tools": [
+    {
+      "text": "Alacritty",
+      "logo": "mdi:letter-a"
+    },
+    {
+      "text": "BBEdit",
+      "logo": "mdi:letter-b"
+    },
+    {
+      "text": "Firefox",
+      "logo": "mdi:mozilla-firefox"
+    },
+    {
+      "text": "Visual Studio Code",
+      "logo": "mdi:visual-studio-code"
+    }
+  ]
+}

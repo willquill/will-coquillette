@@ -1,103 +1,100 @@
-# Overview
+# willcoquillette.com
 
-Personal website of Will Coquillette, built with Gatsby, using a theme from @LekoArts.
+My personal website.
 
-Located [here](https://willcoquillette.com).
+## 🚀 Project Overview
 
-# How I Built This
+willcoquillette.com is a blazing fast personal website built with Astro.js and styled with Tailwind CSS.
 
-## Initial Setup
+I don't like developing websites. So I sincerely thank David Cojocaru, a 16yo coder from Romania for the [theme](https://github.com/cojocaru-david/cojocarudavid.me). I just copied his Astro site and personalized it for myself.
 
-`nvm install 14`
+### Planned changes
 
-`nvm use 14`
+- Do not require "hero" image on blog posts
+- Rename `About` layout to `Markdown` and make the title be a variable properly
+- Fix all the errors in the code
+- Resolve vulnerabilities
 
-`npm install @lekoarts/gatsby-theme-minimal-blog`
+## 🌟 Features
 
-`npm install -g gatsby-cli`
+- 🚀 **Fast and optimized** - Built for speed and performance.
+- 🎨 **Beautiful and customizable UI** - Tailwind CSS for easy customization.
+- 🔒 **Secure and reliable** - Follows best security practices.
+- 🔄 **Continuous integration and deployment** - Automated workflows with GitHub Actions.
 
-`gatsby new will-coquillette LekoArts/gatsby-starter-minimal-blog`
+## 🛠️ Technologies Used
 
-`cd will-coquillette`
+- **Astro.js** - Static site generator.
+- **Tailwind CSS** - Utility-first CSS framework.
+- **TypeScript** - Typed JavaScript at Any Scale.
+- **JavaScript** - High-level, often just-in-time compiled, and multi-paradigm.
+- **CSS** - Cascading Style Sheets.
 
-## Customization
+## 📚 Documentation
 
-Look at the links below to customize it for your own use.
+### Prerequisites
 
-https://github.com/LekoArts/gatsby-starter-minimal-blog
+- Node.js and npm installed.
+- Git installed.
 
-https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog
+### Development Tips
 
-## Test
+- When I need an icon, I search it [here](https://raw.githubusercontent.com/iconify/icon-sets/refs/heads/master/json/mdi.json).
 
-`gatsby develop`
+### Setup
 
-## Build
+1. **Clone the repository:**
 
-Create a static version of the site with the following command.
+   ```sh
+   git clone https://github.com/willquill/will-coquillette.git
+   ```
 
-`gatsby build`
+2. **Install dependencies:**
 
-## Prepare Upload
+   ```sh
+   cd will-coquillette
+   npm install
+   ```
 
-### Install GitHub Pages
+3. **Run the development server:**
 
-`npm install gh-pages`
+   ```sh
+   npm run dev
+   ```
 
-### Add to gatsby-config.js
+### Usage
 
-_Note: I actually needed to omit this next step - it depends on what you want your path to be_
+- **Build for production:**
 
-```js
-module.exports = {
-  pathPrefix: "/will-coquillette",
-}
-```
+  ```sh
+  npm run build
+  ```
 
-### Create CNAME
+- **Deploy:**
 
-`echo "willcoquillette.com" >> CNAME`
+  ```sh
+  npm run deploy
+  ```
 
-More info [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+## 📄 License
 
-### Add to package.json
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```
-{
-  "scripts": {
-    "deploy": "gatsby build --prefix-paths && cp CNAME public/ && gh-pages -d public"
-  }
-}
-```
+## 💬 Contact
 
-### Add the GitHub repository
+Feel free to reach out to me at [nonsense@willquill.addy.io](mailto:nonsense@willquill.addy.io).
 
-`git remote add origin https://willquill.github.com/will-coquillette`
+## 🚀 Connect with Me
 
-## Build and Deploy
+- FIXME: Add socials
 
-`npm run deploy`
+## 🌟 Show Your Support
 
-# Using CircleCI
+Give a ⭐️ if you like this project!
 
-If you want this to automatically build and deploy upon commit, you can use CircleCI. These instructions will be incomplete until I flesh them out further.
+## 🙏 Acknowledgments
 
-## Setting up keys
-
-Definitely read all of [this](https://circleci.com/docs/2.0/gh-bb-integration/#deployment-keys-and-user-keys) first.
-
-The intended function of a CircleCI deploy key is to use the key to checkout (read) your repository. However, since we want to actually generate a static site with Gatsby and then push those files to the gh-pages branch, we'll need to do something special so CircleCI can _write_ to your repository as well.
-
-[This section](https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-deploy-key) of the documentation I linked above walks you through it pretty well, and I'll repeat it here.
-
-If your CircleCI project or your GitHub repository already has a deploy key but you want to start fresh, it's safe to just delete it from both platforms.
-
-Locally, run this command (but with whatever email address you want to use) to generate the key pair. Do not enter a passphrase. Just hit enter to skip it.
-
-`ssh-keygen -t rsa -m PEM -f circleci`
-
-Go to the "Add deploy key" section of your repository settings in GitHub and add the public key created with the `ssh-keygen` command.
-
-Now go to your CircleCI project and add **the private key** under "Additional SSH keys". Do _not_ click "Add Deploy Key" because that auto-generated deploy key is only meant for read access, and we need write as well. For the hostname, enter `github.com`.
-
-The official documentation talks about needing to use `add_ssh_keys` with fingerprints. YOU DO NOT NEED TO DO THIS. In fact, when I did it, the checkout timed out on waiting for a passphrase. You don't even need it for `npm run deploy` - see my .circleci/config.yml as an example.
+- [Astro.js](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [GitHub Actions](https://github.com/features/actions)
+- Again, [David](https://github.com/cojocaru-david/cojocarudavid.me)

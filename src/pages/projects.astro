@@ -1,0 +1,82 @@
+---
+import AppLayout from "@layouts/AppLayout.astro";
+import Header from "@components/Header.astro";
+import data from "@data/contributions.json";
+import ProjectCard from "@components/ProjectCard.astro";
+
+interface Project {
+  name: string;
+  description: string;
+  stars: number;
+  role: "author" | "contributor" | "maintainer";
+  url: string;
+  languages: string[];
+}
+
+const openSourceContributions = data as Project[];
+
+openSourceContributions.sort((a, b) => {
+  if (a.role === "maintainer" && b.role !== "maintainer") {
+    return -1;
+  }
+  if (a.role === "maintainer" && b.role === "maintainer") {
+    return a.stars > b.stars ? -1 : 1;
+  }
+  if (a.role === "author" && b.role === "author") {
+    return a.stars > b.stars ? -1 : 1;
+  }
+  if (a.role === "author" && b.role !== "author") {
+    return -1;
+  }
+  return 0;
+});
+
+const description = "Here are some of my projects:";
+---
+
+<AppLayout
+  title="Will Coquillette - Projects"
+  tags={[
+    "projects",
+    "open source",
+    "contributions",
+    "github",
+    "will coquillette",
+    "will",
+    "coquillette",
+    "willcoquillette",
+    "usa",
+    "developer",
+    "software engineer",
+    "software developer",
+    "software engineering",
+    "software development",
+    "cloud engineer",
+    "devops engineer",
+    "platform engineer",
+    "devops",
+  ]}
+  description={description}
+>
+  <Header title="Open Source" />
+  <p
+    class="max-w-prose mb-10 font-normal dark:text-zinc-400 text-zinc-600 leading-relaxed"
+  >
+    {description}
+  </p>
+  <ul class="grid grid-cols-1 gap-8">
+    {
+      openSourceContributions.map((project) => (
+        <ProjectCard
+          name={project.name}
+          description={project.description}
+          stars={project.stars}
+          role={project.role}
+          url={project.url}
+          languages={project.languages}
+          website={project.website || ""}
+        />
+      ))
+    }
+  </ul>
+</AppLayout>

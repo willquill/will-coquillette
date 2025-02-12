@@ -1,0 +1,24 @@
+[
+  {
+    "href": "/",
+    "text": "Home"
+  },
+  {
+    "href": "/projects/",
+    "text": "Projects"
+  },
+  {
+    "href": "/blog/",
+    "text": "Blog"
+  },
+  {
+    "href": "/about/",
+    "text": "About"
+  },
+  {
+    "href": "https://github.com/willquill/will-coquillette",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "text": "GitHub"
+  }
+]

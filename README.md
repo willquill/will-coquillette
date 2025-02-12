@@ -4,9 +4,9 @@ My personal website.
 
 ## 🚀 Project Overview
 
-willcoquillette.com is a blazing fast personal website built with Astro.js and styled with Tailwind CSS.
+[willcoquillette.com](https://willcoquillette.com) is a blazing fast personal website built with Astro.js and styled with Tailwind CSS.
 
-I don't like developing websites. So I sincerely thank David Cojocaru, a 16yo coder from Romania for the [theme](https://github.com/cojocaru-david/cojocarudavid.me). I just copied his Astro site and personalized it for myself.
+Web development is not my primary strength. So I sincerely thank David Cojocaru, a 16yo coder from Romania for the [theme](https://github.com/cojocaru-david/cojocarudavid.me). I just copied his Astro site and personalized it for myself.
 
 ### Planned changes
 
@@ -70,11 +70,44 @@ I don't like developing websites. So I sincerely thank David Cojocaru, a 16yo co
   npm run build
   ```
 
-- **Deploy:**
+- **Deploy:** (does this do anything...really?)
 
   ```sh
   npm run deploy
   ```
+
+### Publishing to Cloudflare Pages from GitHub
+
+Good info [here](https://developers.cloudflare.com/pages/get-started/git-integration/)
+
+#### Initial setup
+
+1. Install Cloudflare Workers and Pages application in your GitHub.
+2. Give it access to your repository.
+3. Login to Cloudflare and go to Compute > Workers & Pages > Create > Pages > Connect to git
+4. Select your repository, branch, select Astro as preset, leave defaults.
+5. Save & Deploy.
+6. In Cloudflare, go to Custom domains tab for your new site. Click "Set up a custom domain."
+7. Add the DNS records it tells you to add. Continue verifying, and you should be good!
+
+Regarding DNS, I use [DNSControl](https://dnscontrol.org/) to manage my DNS with IaC, and my `dnsconfig.js` looks like this:
+
+```js
+D("willcoquillette.com", REG_NONE,
+    DnsProvider(DSP_CLOUDFLARE),
+    DefaultTTL(1),
+    // Cloudflare pages
+    CNAME("www", "will-coquillette.pages.dev.", CF_PROXY_ON),
+    ALIAS("@", "will-coquillette.pages.dev.", CF_PROXY_ON),
+```
+
+#### Updating the Cloudflare pages site
+
+Here's the super cool thing about Cloudflare pages - when you push a commit to your development branch and open a pull request, the `cloudflare-workers-and-pages` bot will automatically deploy a development version of your site to a URL specified in the `Preview URL` section of the bot's message on your PR. It's pretty neat!
+
+And then when you merge your PR, automation will publish the changes to the public site.
+
+I still recommend doing `npm run dev` locally, but you have a real live public web page you can visit via that integration to view your branch work, which can help when collaborating with others.
 
 ## 📄 License
 

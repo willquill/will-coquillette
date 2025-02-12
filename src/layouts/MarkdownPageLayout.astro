@@ -1,31 +1,21 @@
 ---
-import type { MarkdownLayoutProps } from "astro";
+import AppLayout from "@layouts/AppLayout.astro";
+import Pagination from "@components/Pagination.astro";
 
-type Props = MarkdownLayoutProps<{
-  // Define frontmatter props here
+interface Props {
   title: string;
+  description: string;
   author: string;
-  date: string;
-}>;
+}
 
-// Now, `frontmatter`, `url`, and other Markdown layout properties
-// are accessible with type safety
-const { frontmatter, url } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<html>
-  <head>
-    <!-- Add other Head elements here, like styles and meta tags. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>{frontmatter.title}</title>
-  </head>
-  <body>
-    <!-- Add other UI components here, like common headers and footers. -->
-    <h1>{frontmatter.title} by {frontmatter.author}</h1>
-
-    <!-- 2. Rendered HTML will be passed into the default slot. -->
+<AppLayout title={title}>
+  <article
+    class="prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
+  >
     <slot />
-    <p>Written on: {frontmatter.date}</p>
-  </body>
-</html>
+  </article>
+  <Pagination />
+</AppLayout>

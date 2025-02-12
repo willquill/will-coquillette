@@ -35,6 +35,10 @@ I don't like developing websites. So I sincerely thank David Cojocaru, a 16yo co
 - Node.js and npm installed.
 - Git installed.
 
+### Development Tips
+
+- When I need an icon, I search it [here](https://raw.githubusercontent.com/iconify/icon-sets/refs/heads/master/json/mdi.json).
+
 ### Setup
 
 1. **Clone the repository:**

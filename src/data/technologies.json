@@ -1,5 +1,19 @@
 {
-  "Cloud Infrastructure": [
+  "Cloud Services (work and personal)": [
+    {
+      "text": "AWS",
+      "logo": "mdi:aws"
+    },
+    {
+      "text": "Cloudflare",
+      "logo": "cib:cloudflare"
+    },
+    {
+      "text": "Linode",
+      "logo": "mdi:linode"
+    }
+  ],
+  "Infrastructure as Code": [
     {
       "text": "Helm",
       "logo": "mdi:helm"
@@ -39,24 +53,6 @@
     {
       "text": "Proxmox VE",
       "logo": "mdi:letter-p"
-    }
-  ],
-  "Hosting and Cloud Services": [
-    {
-      "text": "AWS",
-      "logo": "mdi:aws"
-    },
-    {
-      "text": "Cloudflare",
-      "logo": "cib:cloudflare"
-    },
-    {
-      "text": "DigitalOcean",
-      "logo": "mdi:digital-ocean"
-    },
-    {
-      "text": "Linode",
-      "logo": "mdi:linode"
     }
   ],
   "Operating System Proficiency": [

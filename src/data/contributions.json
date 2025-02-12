@@ -3,7 +3,7 @@
     "name": "plex-docker",
     "stars": 68,
     "url": "https://github.com/willquill/plex-docker",
-    "description": "Deploy Plex and supporting apps with docker compose.",
+    "description": "Deploy Plex and supporting apps with docker compose",
     "languages": [
       "Shell",
       "YAML"
@@ -14,7 +14,7 @@
     "name": "omada-ubuntu",
     "stars": 13,
     "url": "https://github.com/willquill/omada-ubuntu",
-    "description": "Deploy TP-Link Omada controller in Ubuntu.",
+    "description": "Deploy TP-Link Omada controller in Ubuntu",
     "languages": [
       "Shell",
       "YAML"
@@ -25,11 +25,45 @@
     "name": "untangle-mdns",
     "stars": 8,
     "url": "https://github.com/willquill/untangle-mdns",
-    "description": "Ansible playbook for adding mDNS to your Untangle box.",
+    "description": "Ansible playbook for adding mDNS to your Untangle box",
     "languages": [
       "Ansible",
       "Shell",
       "YAML"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "ibd-guide",
+    "stars": 0,
+    "url": "https://github.com/willquill/ibd-guide",
+    "description": "IBD guide hosted at https://ibd.guide",
+    "languages": [
+      "Javascript",
+      "MDX"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "cheatsheets",
+    "stars": 0,
+    "url": "https://github.com/willquill/cheatsheets",
+    "description": "Cheatsheets",
+    "languages": [
+      "Markdown",
+      "Junos",
+      "Powershell",
+      "Shell"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "wow-toons",
+    "stars": 0,
+    "url": "https://github.com/willquill/wow-toons",
+    "description": "Messing around with battle.net API for WoW stuff",
+    "languages": [
+      "Python"
     ],
     "role": "author"
   }

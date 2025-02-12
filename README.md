@@ -103,7 +103,11 @@ D("willcoquillette.com", REG_NONE,
 
 #### Updating the Cloudflare pages site
 
-Uhh I think you can go ahead and test locally with `npm run dev` and then just commit and push your changes to the branch you specified when setting up Cloudflare pages (I use `main`), and Cloudflare will automatically deploy your changes.
+Here's the super cool thing about Cloudflare pages - when you push a commit to your development branch and open a pull request, the `cloudflare-workers-and-pages` bot will automatically deploy a development version of your site to a URL specified in the `Preview URL` section of the bot's message on your PR. It's pretty neat!
+
+And then when you merge your PR, automation will publish the changes to the public site.
+
+I still recommend doing `npm run dev` locally, but you have a real live public web page you can visit via that integration to view your branch work, which can help when collaborating with others.
 
 ## 📄 License
 

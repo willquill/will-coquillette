@@ -3,8 +3,6 @@ title: FortiGate 90D-POE with FortiAP on 5.4.1
 description: Tutorial for configuring a FortiAP wireless access point on a FortiGate 90D-POE running FortiOS 5.4.1, including SSID setup
 pubDate: 2016-07-08
 updatedDate: 2016-07-08
-hero: "~/assets/heros/fortinet-logo.png"
-heroAlt: "Fortinet logo"
 tags: ["access point", "dhcp", "firewall", "firewall policy", "fortiap", "fortigate", "fortinet", "wifi", "wifi bridge", "wifi tunnel"]
 ---
 

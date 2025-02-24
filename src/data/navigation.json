@@ -1,7 +1,8 @@
 [
   {
     "href": "/",
-    "text": "Home"
+    "text": "Home",
+    "logo": "mdi:home"
   },
   {
     "href": "/projects/",
@@ -19,6 +20,7 @@
     "href": "https://github.com/willquill/will-coquillette",
     "target": "_blank",
     "rel": "noopener noreferrer",
-    "text": "GitHub"
+    "text": "GitHub",
+    "logo": "mdi:github"
   }
 ]

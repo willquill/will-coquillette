@@ -81,17 +81,21 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
         </p>
       </div>
     </div>
-    <Image
-      src={image}
-      alt={imageAlt}
-      loading="eager"
-      class="rounded-lg"
-      width={1200}
-      height={630}
-    />
+    {
+      image && (
+        <Image
+          src={image}
+          alt={imageAlt}
+          loading="eager"
+          class="rounded-lg"
+          width={1200}
+          height={630}
+        />
+      )
+    }
   </header>
   <article
-    class="prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-teal-500 prose-img:rounded-lg"
+    class="prose dark:prose-invert lg:prose-lg dark:prose-code:text-zinc-300 dark:prose-a:text-blue-400 prose-a:text-blue-600 max-w-none hover:prose-a:underline focus:prose-a:underline prose-a:no-underline dark:prose-headings:text-blue-400 prose-headings:text-blue-600 prose-img:rounded-lg"
   >
     <slot />
   </article>

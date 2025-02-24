@@ -3,8 +3,6 @@ title: Ubuntu 18.04 LXD/LXC, ZFS, Docker, and Advanced Networking
 description: Tutorial for configuring Ubuntu 18.04 on a machine with two NICs, dedicating one NIC to host traffic and a second NIC for LXC/Docker traffic
 pubDate: 2021-05-06
 updatedDate: 2021-05-06
-hero: "~/assets/heros/ubuntu-logo.png"
-heroAlt: "Ubuntu logo"
 tags: ["ubuntu", "cron", "samba", "smb", "linux", "mac vlan", "plex", "vpn", "lxc", "lxd", "docker", "netplan"]
 ---
 

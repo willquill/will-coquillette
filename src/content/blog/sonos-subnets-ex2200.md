@@ -3,8 +3,6 @@ title: Sonos across subnets on Juniper EX2200
 description: Tutorial for configuring a loopback interface on a Juniper EX2200 in order to allow multicast when Sonos clients and Sonos speakers are on different subnets
 pubDate: 2021-12-09
 updatedDate: 2025-02-08
-hero: "~/assets/heros/sonos-logo.png"
-heroAlt: "Sonos logo"
 tags: ["sonos", "juniper", "junos", "networking", "layer2", "switching", "multicast", "ospf"]
 ---
 

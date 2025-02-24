@@ -3,8 +3,6 @@ title: Death Valley in the Age of GPS
 description: Mapping out a hike and using a Garmin watch to track the hike. Fun with Gaia GPS and other tools. More text to meet minimum for blog description.
 pubDate: 2017-02-05
 updatedDate: 2017-02-05
-hero: "~/assets/heros/gps-watch.png"
-heroAlt: "GPS watch"
 tags: ["garmin", "gps", "hiking", "smartwatch"]
 ---
 

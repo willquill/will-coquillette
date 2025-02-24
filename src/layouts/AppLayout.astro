@@ -5,6 +5,7 @@ import navigation from "@data/navigation.json";
 import "@fontsource-variable/lexend";
 import Footer from "@components/Footer.astro";
 import "@styles/global.css";
+import { Icon } from "astro-icon";
 
 interface Props {
   title?: string;
@@ -52,14 +53,6 @@ const date = pubDate || lastmod || new Date();
     <meta property="og:site_name" content={author} />
     <meta property="og:image:alt" content={ogImage.alt} />
     <meta property="og:locale" content="en_US" />
-    <!-- <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="https://cojocarudavid.me" />
-    <meta name="twitter:creator" content={author} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImageURL} />
-    <meta name="twitter:image:alt" content={ogImage.alt} />
-    <meta name="twitter:domain" content="cojocarudavid.me" /> -->
     <meta name="theme-color" content="#60A5FA" />
     <meta name="msapplication-TileColor" content="#60A5FA" />
     <meta name="color-scheme" content="light dark" />
@@ -128,13 +121,25 @@ const date = pubDate || lastmod || new Date();
     >
     </div>
     <nav
-      class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0"
+      class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0 overflow-x-auto"
     >
-      <ul class="flex justify-center space-x-4 text-sm">
+      <ul
+        class="flex justify-start lg:justify-center space-x-1 text-sm whitespace-nowrap"
+      >
         {
-          navigation.map((item) => (
-            <li>
-              <Link {...item} addClass="font-lg font-medium" />
+          navigation.map((item, index) => (
+            <li class="flex items-center">
+              {item.logo ? (
+                <a href={item.href}>
+                  <Icon
+                    name={item.logo}
+                    class="w-6 h-6 text-zinc-600 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-400"
+                  />
+                </a>
+              ) : (
+                <Link {...item} addClass="font-lg font-medium" />
+              )}
+              {index < navigation.length - 1 && <span class="mx-1">|</span>}
             </li>
           ))
         }
@@ -147,16 +152,5 @@ const date = pubDate || lastmod || new Date();
       <slot />
       <Footer />
     </main>
-
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GQ8HDJ8L1"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-    
-      gtag("config", "G-1GQ8HDJ8L1");
-    </script> -->
   </body>
 </html>

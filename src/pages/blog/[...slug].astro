@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "@layouts/BlogLayout.astro";
-import { CollectionEntry, getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -20,13 +21,13 @@ const { Content } = await post.render();
   title={frontmatter.title}
   pubDate={frontmatter.pubDate}
   image={frontmatter.hero}
-  imageAlt={frontmatter.heroAlt}
+  imageAlt={frontmatter.heroAlt ?? ""}
   description={frontmatter.description}
   url={post.slug}
   updatedDate={frontmatter.updatedDate}
   tags={frontmatter.tags}
-  author={frontmatter.author}
-  authorImage={frontmatter.authorImage}
+  author={frontmatter.author ?? ""}
+  authorImage={frontmatter.authorImage ?? ""}
 >
   <Content />
 </BlogLayout>

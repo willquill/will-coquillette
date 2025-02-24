@@ -130,12 +130,15 @@ const date = pubDate || lastmod || new Date();
     <nav
       class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0 overflow-x-auto"
     >
-      <ul class="flex justify-center space-x-4 text-sm whitespace-nowrap">
+      <ul class="flex justify-center space-x-2 text-sm whitespace-nowrap">
         {
-          navigation.map((item) => (
-            <li>
-              <Link {...item} addClass="font-lg font-medium" />
-            </li>
+          navigation.map((item, index) => (
+            <>
+              <li>
+                <Link {...item} addClass="font-lg font-medium" />
+              </li>
+              {index < navigation.length - 1 && <span class="mx-2">|</span>}
+            </>
           ))
         }
       </ul>

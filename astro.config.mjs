@@ -1,18 +1,18 @@
 import { defineConfig, sharpImageService } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import { readFileSync } from "node:fs";
 import mdx from '@astrojs/mdx';
+import tailwindcss from "@tailwindcss/vite";
 import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compressor(), mdx()],
+  integrations: [compressor(), mdx()],
   image: {
     service: sharpImageService()
   },
   site: "https://willcoquillette.com",
   vite: {
-    plugins: [rawFonts([".ttf", ".woff"])],
+    plugins: [rawFonts([".ttf", ".woff"]), tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"]
     }

@@ -12,15 +12,14 @@
     "test:watch": "astro test --watch"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/inter": "^5.0.8",
     "@fontsource/inter": "^5.0.8",
     "@resvg/resvg-js": "^2.4.1",
     "@tailwindcss/typography": "^0.5.10",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
-    "astro": "^4.16.18",
+    "astro": "^5.3.1",
     "astro-expressive-code": "^0.38.3",
     "astro-icon": "^0.8.1",
     "eslint": "^8.50.0",
@@ -32,15 +31,15 @@
     "tsm": "^2.3.0"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.8",
-    "@astrojs/netlify": "^3.1.1",
-    "@astrojs/preact": "^3.0.1",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/preact": "^4.0.4",
     "@fontsource-variable/exo-2": "^5.1.1",
     "@fontsource-variable/lexend": "^5.1.2",
     "@fontsource/ibm-plex-sans": "^5.1.1",
     "@octokit/core": "^4.2.4",
+    "@tailwindcss/vite": "^4.0.8",
     "astro-compressor": "^0.4.1",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^4.0.8",
     "typescript-esbuild": "^0.2.22",
     "vite-plugin-compress": "^2.1.1"
   },
@@ -51,10 +50,10 @@
   "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cojocaru-david/willcoquillette.com.git"
+    "url": "https://github.com/willquill/will-coquillette.git"
   },
   "bugs": {
-    "url": "https://github.com/cojocaru-david/willcoquillette.com/issues"
+    "url": "https://github.com/willquill/will-coquillette/issues"
   },
   "homepage": "https://willcoquillette.com",
   "private": false

@@ -5,6 +5,7 @@ import navigation from "@data/navigation.json";
 import "@fontsource-variable/lexend";
 import Footer from "@components/Footer.astro";
 import "@styles/global.css";
+import { Icon } from "astro-icon";
 
 interface Props {
   title?: string;
@@ -128,7 +129,16 @@ const date = pubDate || lastmod || new Date();
         {
           navigation.map((item, index) => (
             <li class="flex items-center">
-              <Link {...item} addClass="font-lg font-medium" />
+              {item.logo ? (
+                <a href={item.href}>
+                  <Icon
+                    name={item.logo}
+                    class="w-6 h-6 text-zinc-600 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-400"
+                  />
+                </a>
+              ) : (
+                <Link {...item} addClass="font-lg font-medium" />
+              )}
               {index < navigation.length - 1 && <span class="mx-2">|</span>}
             </li>
           ))
@@ -142,16 +152,5 @@ const date = pubDate || lastmod || new Date();
       <slot />
       <Footer />
     </main>
-
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-1GQ8HDJ8L1"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-    
-      gtag("config", "G-1GQ8HDJ8L1");
-    </script> -->
   </body>
 </html>

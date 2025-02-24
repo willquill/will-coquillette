@@ -128,9 +128,9 @@ const date = pubDate || lastmod || new Date();
     >
     </div>
     <nav
-      class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0"
+      class="sticky top-0 z-10 lg:backdrop-blur-lg bg-zinc-900 bg-opacity-90 lg:bg-opacity-50 py-4 px-6 lg:px-0 overflow-x-auto"
     >
-      <ul class="flex justify-center space-x-4 text-sm">
+      <ul class="flex justify-center space-x-4 text-sm whitespace-nowrap">
         {
           navigation.map((item) => (
             <li>

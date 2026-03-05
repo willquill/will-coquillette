@@ -1,24 +1,18 @@
 [
   {
     "name": "plex-docker",
-    "stars": 68,
+    "stars": 90,
     "url": "https://github.com/willquill/plex-docker",
     "description": "Deploy Plex and supporting apps with docker compose",
-    "languages": [
-      "Shell",
-      "YAML"
-    ],
+    "languages": ["Shell", "YAML"],
     "role": "author"
   },
   {
     "name": "omada-ubuntu",
-    "stars": 13,
+    "stars": 15,
     "url": "https://github.com/willquill/omada-ubuntu",
     "description": "Deploy TP-Link Omada controller in Ubuntu",
-    "languages": [
-      "Shell",
-      "YAML"
-    ],
+    "languages": ["Shell", "YAML"],
     "role": "author"
   },
   {
@@ -26,11 +20,7 @@
     "stars": 8,
     "url": "https://github.com/willquill/untangle-mdns",
     "description": "Ansible playbook for adding mDNS to your Untangle box",
-    "languages": [
-      "Ansible",
-      "Shell",
-      "YAML"
-    ],
+    "languages": ["Ansible", "Shell", "YAML"],
     "role": "author"
   },
   {
@@ -38,10 +28,7 @@
     "stars": 0,
     "url": "https://github.com/willquill/ibd-guide",
     "description": "IBD guide hosted at https://ibd.guide",
-    "languages": [
-      "Javascript",
-      "MDX"
-    ],
+    "languages": ["Javascript", "MDX"],
     "role": "author"
   },
   {
@@ -49,12 +36,15 @@
     "stars": 0,
     "url": "https://github.com/willquill/cheatsheets",
     "description": "Cheatsheets",
-    "languages": [
-      "Markdown",
-      "Junos",
-      "Powershell",
-      "Shell"
-    ],
+    "languages": ["Markdown", "Junos", "Powershell", "Shell"],
+    "role": "author"
+  },
+  {
+    "name": "ansible-playbooks",
+    "stars": 2,
+    "url": "https://github.com/willquill/ansible-playbooks",
+    "description": "Ansible playbooks I use or have used in my homelab.",
+    "languages": ["Jinja"],
     "role": "author"
   },
   {
@@ -62,9 +52,7 @@
     "stars": 0,
     "url": "https://github.com/willquill/wow-toons",
     "description": "Messing around with battle.net API for WoW stuff",
-    "languages": [
-      "Python"
-    ],
+    "languages": ["Python"],
     "role": "author"
   }
 ]

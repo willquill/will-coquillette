@@ -1,9 +1,19 @@
 ---
 title: Sonos across subnets on Juniper EX2200
 description: Tutorial for configuring a loopback interface on a Juniper EX2200 in order to allow multicast when Sonos clients and Sonos speakers are on different subnets
-pubDate: 2021-12-09
+pubDate: 2019-12-09
 updatedDate: 2025-02-08
-tags: ["sonos", "juniper", "junos", "networking", "layer2", "switching", "multicast", "ospf"]
+tags:
+  [
+    "sonos",
+    "juniper",
+    "junos",
+    "networking",
+    "layer2",
+    "switching",
+    "multicast",
+    "ospf",
+  ]
 ---
 
 Since I have a Juniper EX2200 performing my layer 3 routing for internal traffic and I have Sonos on a separate subnet than some Sonos clients, I needed to allow multicast across subnets. By creating a loopback interface and using it as my PIM rendezvous point, I was able to get my Windows desktop on 10.1.20.0/24 (Wired) find my Sonos speaker on 10.1.50.0/24 (WiFi).

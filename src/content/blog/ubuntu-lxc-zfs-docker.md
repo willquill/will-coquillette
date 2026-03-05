@@ -1,9 +1,23 @@
 ---
 title: Ubuntu 18.04 LXD/LXC, ZFS, Docker, and Advanced Networking
 description: Tutorial for configuring Ubuntu 18.04 on a machine with two NICs, dedicating one NIC to host traffic and a second NIC for LXC/Docker traffic
-pubDate: 2021-05-06
+pubDate: 2019-05-01
 updatedDate: 2021-05-06
-tags: ["ubuntu", "cron", "samba", "smb", "linux", "mac vlan", "plex", "vpn", "lxc", "lxd", "docker", "netplan"]
+tags:
+  [
+    "ubuntu",
+    "cron",
+    "samba",
+    "smb",
+    "linux",
+    "mac vlan",
+    "plex",
+    "vpn",
+    "lxc",
+    "lxd",
+    "docker",
+    "netplan",
+  ]
 ---
 
 This is a complete, step by step tutorial on configuring the following:
@@ -82,11 +96,11 @@ network:
       gateway4: 10.1.20.1
       nameservers:
         addresses:
-        - 10.1.20.254
-        - 10.1.20.253
-        - 1.1.1.1
+          - 10.1.20.254
+          - 10.1.20.253
+          - 1.1.1.1
         search:
-        - <YOUR-DOMAIN-HERE>
+          - <YOUR-DOMAIN-HERE>
     enp1s0f1:
       dhcp4: false
 # I don't think this bridge is necessary but I could be wrong

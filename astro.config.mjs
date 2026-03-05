@@ -3,10 +3,11 @@ import tailwind from "@astrojs/tailwind";
 import { readFileSync } from "node:fs";
 import mdx from '@astrojs/mdx';
 import compressor from "astro-compressor";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compressor(), mdx()],
+  integrations: [tailwind(), compressor(), mdx(), icon()],
   image: {
     service: sharpImageService()
   },
